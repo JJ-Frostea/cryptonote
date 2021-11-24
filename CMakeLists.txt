@@ -12,6 +12,8 @@ enable_testing()
 # copy CTestCustom.cmake to build dir to disable long running tests in 'make test'
 configure_file(${CMAKE_SOURCE_DIR}/CTestCustom.cmake ${CMAKE_BINARY_DIR})
 
+set_property(TARGET daemon PROPERTY OUTPUT_NAME "FULCOINd")
+
 project(CryptoNote)
 
 include_directories(include src external "${CMAKE_BINARY_DIR}/version")
